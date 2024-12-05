@@ -9,7 +9,7 @@ on:
             - release
             
 jobs:
-
+  #primer job
   Testing:
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
             coverage: none
 
       - name: Saludar
-        run: php --version
+        run: php -r "echo 'hola, a todos es un placer saludarlos';"
 
             
           
