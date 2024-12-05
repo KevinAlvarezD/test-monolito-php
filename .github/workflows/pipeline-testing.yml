@@ -33,8 +33,19 @@ jobs:
     
         - name: Generate application key
           run: php artisan key:generate
+
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+              node-version: '22'
+
+        - name: instalamos los paquetes de node js
+          run: npm install
+
+        - name: compilamos el frontend
+          run: npm run build  
     
         - name: Run migrations
-          run: php artisan migrate --env=testing
+          run: php artisan test
             
           
